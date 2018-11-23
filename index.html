@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="css/raw.css">
+  <script src="script.js"></script>
+  <style>
+    @import url("css/Roboto.css");
+
+    :root {
+      --nav-height: 90px;
+    }
+
+    body {
+      font-family: Roboto;
+      height: 2000px;
+      padding-top: var(--nav-height);
+      background: #d9d9d9;
+    }
+
+    .nav {
+      color: black;
+      background-color: gray;
+      height: var(--nav-height);
+      top: 0;
+      position: fixed;
+      width: 100%;
+      transition: all .3s ease-in;
+    }
+
+    .pad {
+      padding: 10px;
+    }
+
+    .container {
+      margin: 20px 20px 0px 20px;
+      background: white;
+    }
+
+    .bloc, .bloc2 {
+      border: 1px solid darkgray;
+      width: 250px;
+      height: 50px;
+    }
+
+    .bloc2 {
+      border: 1px solid darkgray;
+      margin: 20px;
+    }
+    .btn{
+      width: 150px;
+      margin: 10px 0px 10px 0px;
+    }
+    .retract .nav{
+      background: pink;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav row right">
+    <div class="pad">Concept</div>
+    <div class="pad">Ever</div>
+    <div class="pad">Offre</div>
+  </div>
+
+  <div>
+    <h1>Training</h1>
+    <h2>sous-titre</h2>
+  </div>
+
+  <div class="container">
+    <div>
+      <h3>entrainement aujourd'hui</h3>
+    </div>
+    <button class="btn" type="button" onclick="document.body.classList.toggle('retract')">Clic</button>
+    <div class="rows between">
+      <div class="bloc">
+        Vestibulum id ligula porta felis euismod semper.
+      </div>
+      <div class="bloc">
+        Vestibulum id ligula porta felis euismod semper.
+      </div>
+    </div>
+    <div class="rows center">
+      <div class="bloc2">estibulum id ligula porta felis euismod semper</div>
+      <div class="bloc2">estibulum id ligula porta felis euismod semper</div>
+      <div class="bloc2">estibulum id ligula porta felis euismod semper</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div> entrainement aujourd'hui</div>
+  </div>
+
+
+
+</body>
+
+</html>
