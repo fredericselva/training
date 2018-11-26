@@ -34,9 +34,13 @@
     .pad {
       padding: 10px;
     }
+    .pad:hover{
+      border: 2px solid red;
+      transition: all 0.2s ease-in;
+    }
 
     .container {
-      margin: 20px 20px 0px 20px;
+      margin: 20px 20px 20px 20px;
       background: white;
     }
 
@@ -58,6 +62,28 @@
       background: pink;
       overflow: hidden;
     }
+    .ex3{ padding-bottom: 20px; }
+    .align{ text-align: center; }
+    .borderbox{
+      border: 1px solid black;
+      text-align: center;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+    .container2{ padding: 0px 30px 30px 30px; }
+    .flex-container{
+      display: flex;
+      flex-wrap: wrap;
+     }
+     .flex-container:hover{
+       background: red;
+       transition: all .4s ease-in;
+      }
+     .textsize {
+       font-size: 20px;
+     }
+     .paragraphe{ font-style: italic; }
+
   </style>
 </head>
 
@@ -97,7 +123,131 @@
     <div> entrainement aujourd'hui</div>
   </div>
 
+  <h2 class="ex3"> Exercice 3</h2>
 
+  <div class="container2">
+    <div class="flex-container">
+      <div class="borderbox">
+        Lieu
+      </div>
+      <div class="borderbox">
+        Date
+      </div>
+      <div class="borderbox">
+        Heure
+      </div>
+      <div class="borderbox">
+        Nom photographe
+      </div>
+      <div class="borderbox">
+        Nombre photos
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="borderbox">
+        PARIS
+      </div>
+      <div class="borderbox">
+        8/12/2018
+      </div>
+      <div class="borderbox">
+        14h00
+      </div>
+      <div class="borderbox">
+        Alan
+      </div>
+      <div class="borderbox">
+        30
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="borderbox">
+        PARIS
+      </div>
+      <div class="borderbox">
+        8/12/2018
+      </div>
+      <div class="borderbox">
+        14h00
+      </div>
+      <div class="borderbox">
+        Alan
+      </div>
+      <div class="borderbox">
+        30
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="borderbox">
+        PARIS
+      </div>
+      <div class="borderbox">
+        8/12/2018
+      </div>
+      <div class="borderbox">
+        14h00
+      </div>
+      <div class="borderbox">
+        Alan
+      </div>
+      <div class="borderbox">
+        30
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="borderbox">
+        PARIS
+      </div>
+      <div class="borderbox">
+        8/12/2018
+      </div>
+      <div class="borderbox">
+        14h00
+      </div>
+      <div class="borderbox">
+        Alan
+      </div>
+      <div class="borderbox">
+        30
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="borderbox">
+        PARIS
+      </div>
+      <div class="borderbox">
+        8/12/2018
+      </div>
+      <div class="borderbox">
+        14h00
+      </div>
+      <div class="borderbox">
+        Alan
+      </div>
+      <div class="borderbox">
+        30
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <h2 class="ex3"> Exercice 4</h2>
+
+  <div class="container">
+    <div class="flex-container2">
+    <div class="rows">
+      <div class="borderbox">
+        <h4 class="textsize">Java</h4>
+        <p class="paragraphe">Java est une technique informatique développée initialement par Sun Microsystems puis rachetée par Oracle. Défini à l'origine comme un langage de programmation, Java a évolué pour devenir un ensemble cohérent d'éléments
+          techniques et non techniques</p>
+      </div>
+      <div class="borderbox">
+        <h4 class="textsize">Python</h4>
+        <p class="paragraphe">Python est un langage de programmation objet interprété, multi-paradigme et multiplateformes. Il favorise la programmation impérative structurée, fonctionnelle et orientée objet.</p>
+      </div>
+    </div>
+    </div>
+  </div>
 
 </body>
 
