@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Titre de la page</title>
   <link rel="stylesheet" href="css/raw.css">
-  <script src="script.js"></script>
   <style>
     @import url("css/Roboto.css");
 
@@ -58,31 +57,41 @@
       width: 150px;
       margin: 10px 0px 10px 0px;
     }
-    .retract .nav{
+    .retract .nav {
       background: pink;
       overflow: hidden;
     }
-    .ex3{ padding-bottom: 20px; }
-    .align{ text-align: center; }
-    .borderbox{
-      border: 1px solid black;
-      text-align: center;
-      flex-grow: 1;
-      flex-basis: 0;
+    .ex3 { padding-bottom: 20px; }
+    .align { text-align: center; }
+    .table-cell, .borderbox {
+      flex: 1 0;
+      padding: 8px 12px;
     }
-    .container2{ padding: 0px 30px 30px 30px; }
-    .flex-container{
-      display: flex;
-      flex-wrap: wrap;
-     }
-     .flex-container:hover{
-       background: red;
-       transition: all .4s ease-in;
-      }
-     .textsize {
-       font-size: 20px;
-     }
-     .paragraphe{ font-style: italic; }
+    .borderbox {
+      border: 1px solid black;
+    }
+    .table-row:nth-child(1) {
+      border-top: 1px solid black;
+    }
+    .table-row {
+      border-bottom: 1px solid black;
+    }
+    .table-cell:nth-child(1) {
+      border-left: 1px solid black;
+    }
+    .table-cell {
+      border-right: 1px solid black;
+    }
+
+    .table { padding: 0px 30px 30px 30px; }
+   .table-row:hover{
+     background: red;
+     transition: all .1s ease-in;
+    }
+   .textsize {
+     font-size: 20px;
+   }
+   .paragraphe{ font-style: italic; }
 
   </style>
 </head>
@@ -125,106 +134,106 @@
 
   <h2 class="ex3"> Exercice 3</h2>
 
-  <div class="container2">
-    <div class="flex-container">
-      <div class="borderbox">
+  <div class="table">
+    <div class="row table-row">
+      <div class="table-cell align">
         Lieu
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         Date
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         Heure
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         Nom photographe
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         Nombre photos
       </div>
     </div>
-    <div class="flex-container">
-      <div class="borderbox">
+    <div class="row table-row">
+      <div class="table-cell align">
         PARIS
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         8/12/2018
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         14h00
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         Alan
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         30
       </div>
     </div>
-    <div class="flex-container">
-      <div class="borderbox">
+    <div class="row table-row">
+      <div class="table-cell align">
         PARIS
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         8/12/2018
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         14h00
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         Alan
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         30
       </div>
     </div>
-    <div class="flex-container">
-      <div class="borderbox">
+    <div class="row table-row">
+      <div class="table-cell align">
         PARIS
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         8/12/2018
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         14h00
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         Alan
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         30
       </div>
     </div>
-    <div class="flex-container">
-      <div class="borderbox">
+    <div class="row table-row">
+      <div class="table-cell align">
         PARIS
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         8/12/2018
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         14h00
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         Alan
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         30
       </div>
     </div>
-    <div class="flex-container">
-      <div class="borderbox">
+    <div class="row table-row">
+      <div class="table-cell align">
         PARIS
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         8/12/2018
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         14h00
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         Alan
       </div>
-      <div class="borderbox">
+      <div class="table-cell align">
         30
       </div>
     </div>
@@ -234,16 +243,15 @@
   <h2 class="ex3"> Exercice 4</h2>
 
   <div class="container">
-    <div class="flex-container2">
     <div class="rows">
       <div class="borderbox">
-        <h4 class="textsize">Java</h4>
-        <p class="paragraphe">Java est une technique informatique développée initialement par Sun Microsystems puis rachetée par Oracle. Défini à l'origine comme un langage de programmation, Java a évolué pour devenir un ensemble cohérent d'éléments
-          techniques et non techniques</p>
+        <h3>Java</h3>
+        <div class="paragraphe">Java est une technique informatique développée initialement par Sun Microsystems puis rachetée par Oracle. Défini à l'origine comme un langage de programmation, Java a évolué pour devenir un ensemble cohérent d'éléments
+          techniques et non techniques</div>
       </div>
       <div class="borderbox">
-        <h4 class="textsize">Python</h4>
-        <p class="paragraphe">Python est un langage de programmation objet interprété, multi-paradigme et multiplateformes. Il favorise la programmation impérative structurée, fonctionnelle et orientée objet.</p>
+        <h3>Python</h3>
+        <div class="paragraphe">Python est un langage de programmation objet interprété, multi-paradigme et multiplateformes. Il favorise la programmation impérative structurée, fonctionnelle et orientée objet.</div>
       </div>
     </div>
     </div>
