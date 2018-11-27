@@ -25,15 +25,160 @@
       padding: 20px 20px 20px 20px;
     }
 
+    .pos {
+      position: absolute;
+      left: 0;
+    }
+    .placeholder{
+      position: absolute;
+      right: 0;
+      padding-right: 200px;
+    }
+    .book{
+      position: absolute;
+      right: 0;
+      color: red;
+      }
+      .info{
+        background: #3B3E41;
+        width: 100%;
+        text-align: center;
+        color: white;
+        padding: 10px;
+      }
+      .banner{
+        left: 0px;
+        right: 0px;
+        width: 100%;
+      }
+      .small{
+        height: 300px;
+        width: 300px;
+        padding-left: 5px;
+      }
+      .pad{
+        padding-right: 20px;
+        height: 402px;
+      }
+      .footer{
+        background: #eee;
+        color: black;
+        max-width: 100%;
+      }
+      .footer-padding{ padding: 20px 20px 20px 20px; }
+      .container { background: #eee; flex: 1 0;}
+      .middle { padding: 10px;}
+      .image-size {
+        width: 200px;
+        padding: 10px;
+      }
   </style>
 </head>
 
 <body>
-  <div class="navbar row center">
-    <div class="padding left">LOGO</div>
-    <div class="padding ">CONCEPT</div>
-    <div class="padding ">EVER</div>
-    <div class="padding ">OFFRE</div>
+  <div class="navbar rows center">
+    <div class="padding pos">LOGO</div>
+    <div class="padding">CONCEPT</div>
+    <div class="padding">EVER</div>
+    <div class="padding">OFFRE</div>
+    <div class="padding placeholder">
+      <input type="text" placeholder="search..">
+    </div>
+    <div class="padding book">RESERVER MON SHOOTING</div>
+  </div>
+  <div class="info">SEANCE PHOTO OFFERTE !</div>
+  <div class="rows center">
+    <div>
+      <img src="images/img1.png">
+    </div>
+    <div>
+      <img src="images/img2.jpg">
+    </div>
+  </div>
+  <div>
+    <img class="banner" src="images/banner.jpg">
+  </div>
+  <hr>
+  <div class="rows center">
+    <div class="middle">
+      <img src="images/img2.jpg">
+    </div>
+    <!-- <div class="image-size">
+      <img src="images/img2.jpg">
+    </div> -->
+    <div class="column">
+      <div class="image-size">
+        <img src="images/img2.jpg">
+      </div>
+      <div class="image-size">
+        <img src="images/img2.jpg">
+      </div>
+      <div class="image-size">
+        <img src="images/img2.jpg">
+      </div>
+    </div>
+    <div class="column">
+      <div class="image-size">
+        <img src="images/img2.jpg">
+      </div>
+      <div class="image-size">
+        <img src="images/img2.jpg">
+      </div>
+      <div class="image-size">
+        <img src="images/img2.jpg">
+      </div>
+    </div>
+    <div class="column">
+      <div class="image-size">
+        <img src="images/img2.jpg">
+      </div>
+      <div class="image-size">
+        <img src="images/img2.jpg">
+      </div>
+      <div class="image-size">
+        <img src="images/img2.jpg">
+      </div>
+    </div>
+  </div>
+  <!--FOOTER-->
+  <div class="container">
+    <div class="rows around">
+      <div class="columns footer">
+        <div class="footer-padding"><strong>EVER FOOTER1</strong></div>
+        <div class="footer-padding">element1</div>
+        <div class="footer-padding">element2</div>
+        <div class="footer-padding">element3</div>
+        <div class="footer-padding">element4</div>
+      </div>
+      <div class="columns footer">
+        <div class="footer-padding"><strong>EVER FOOTER2</strong></div>
+        <div class="footer-padding">element1</div>
+        <div class="footer-padding">element2</div>
+        <div class="footer-padding">element3</div>
+        <div class="footer-padding">element4</div>
+      </div>
+      <div class="columns footer">
+        <div class="footer-padding"><strong>EVER FOOTER3</strong></div>
+        <div class="footer-padding">element1</div>
+        <div class="footer-padding">element2</div>
+        <div class="footer-padding">element3</div>
+        <div class="footer-padding">element4</div>
+      </div>
+      <div class="columns footer">
+        <div class="footer-padding"><strong>EVER FOOTER4</strong></div>
+        <div class="footer-padding">element1</div>
+        <div class="footer-padding">element2</div>
+        <div class="footer-padding">element3</div>
+        <div class="footer-padding">element4</div>
+      </div>
+      <div class="columns footer">
+        <div class="footer-padding"><strong>EVER FOOTER5</strong></div>
+        <div class="footer-padding">element1</div>
+        <div class="footer-padding">element2</div>
+        <div class="footer-padding">element3</div>
+        <div class="footer-padding">element4</div>
+      </div>
+    </div>
   </div>
 </body>
 
