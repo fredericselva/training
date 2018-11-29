@@ -95,8 +95,14 @@
     .paragraphe {
       font-style: italic;
     }
-    .search{ padding: 10px; }
-    .input{ width: 200px; }
+
+    .search {
+      padding: 10px;
+    }
+
+    .input {
+      width: 200px;
+    }
   </style>
 </head>
 
@@ -132,7 +138,7 @@
           Nombre photos
         </div>
       </div>
-      <div class="row table-row" v-for="session in filteredList">
+      <div class="row table-row" v-for="session in filteredList" v-for="session in filteredList2">
         <div class="table-cell align">
           {{ session.location }}
         </div>
@@ -157,7 +163,7 @@
     </div>
     <div class="search">
       Find :
-      <input class="input"  placeholder="Filter by photographer's name" v-model="searchName" />
+      <input class="input" placeholder="Filter by photographer's name" v-model="searchName" />
     </div>
 
   </div>
@@ -193,10 +199,9 @@
       },
       computed: {
         filteredList() {
-          return this.sessions.filter(session => {
-            return session.location.toLowerCase().includes(this.searchLocation.toLowerCase())
-            return session.name.toLowerCase().includes(this.searchName.toLowerCase())
-          })
+          return this.sessions
+            .filter(session => session.location.toLowerCase().includes(this.searchLocation.toLowerCase()))
+            .filter(session => session.name.toLowerCase().includes(this.searchName.toLowerCase()))
         }
       }
     })
