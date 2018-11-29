@@ -173,12 +173,10 @@
       data: {
         sessions: []
       },
-      methods: {
-        mounted: function() {
-          axios.get('json/sessions.json').then(res => {
-            this.sessions = res.data
-          })
-        }
+      mounted() {
+        axios.get('json/sessions.json').then(res => {
+          this.sessions = res.data
+        })
       }
     });
   </script>
