@@ -109,136 +109,56 @@
   <div>
     <h1 class="rows center">Training</h1>
   </div>
-
-  <h2 class="title">HTML/CSS</h2>
-
-  <div class="table">
-    <div class="row table-row">
-      <div class="table-cell align">
-        Lieu
-      </div>
-      <div class="table-cell align">
-        Date
-      </div>
-      <div class="table-cell align">
-        Heure
-      </div>
-      <div class="table-cell align">
-        Nom photographe
-      </div>
-      <div class="table-cell align">
-        Nombre photos
-      </div>
-    </div>
-    <div class="row table-row">
-      <div class="table-cell align">
-        PARIS
-      </div>
-      <div class="table-cell align">
-        8/12/2018
-      </div>
-      <div class="table-cell align">
-        14h00
-      </div>
-      <div class="table-cell align">
-        Alan
-      </div>
-      <div class="table-cell align">
-        30
-      </div>
-    </div>
-    <div class="row table-row">
-      <div class="table-cell align">
-        PARIS
-      </div>
-      <div class="table-cell align">
-        8/12/2018
-      </div>
-      <div class="table-cell align">
-        14h00
-      </div>
-      <div class="table-cell align">
-        Alan
-      </div>
-      <div class="table-cell align">
-        30
-      </div>
-    </div>
-    <div class="row table-row">
-      <div class="table-cell align">
-        PARIS
-      </div>
-      <div class="table-cell align">
-        8/12/2018
-      </div>
-      <div class="table-cell align">
-        14h00
-      </div>
-      <div class="table-cell align">
-        Alan
-      </div>
-      <div class="table-cell align">
-        30
-      </div>
-    </div>
-    <div class="row table-row">
-      <div class="table-cell align">
-        PARIS
-      </div>
-      <div class="table-cell align">
-        8/12/2018
-      </div>
-      <div class="table-cell align">
-        14h00
-      </div>
-      <div class="table-cell align">
-        Alan
-      </div>
-      <div class="table-cell align">
-        30
-      </div>
-    </div>
-    <div class="row table-row">
-      <div class="table-cell align">
-        PARIS
-      </div>
-      <div class="table-cell align">
-        8/12/2018
-      </div>
-      <div class="table-cell align">
-        14h00
-      </div>
-      <div class="table-cell align">
-        Alan
-      </div>
-      <div class="table-cell align">
-        30
-      </div>
-    </div>
-  </div>
   <h2 class="title">Vue.js</h2>
   <div id="app-1">
     <div class="table">
-      <div class="row table-row" v-for="list in lists">
+      <div class="row table-row">
         <div class="table-cell align">
-          {{ list.location }}
+          Lieu
         </div>
         <div class="table-cell align">
-          {{ list.date }}
+          Date
         </div>
         <div class="table-cell align">
-          {{ list.hour }}
+          Heure
         </div>
         <div class="table-cell align">
-          {{ list.name }}
+          Nom photographe
         </div>
         <div class="table-cell align">
-          {{ list.numberPhoto }}
+          Nombre photos
+        </div>
+      </div>
+      <div class="row table-row" v-for="session in sessions">
+        <div class="table-cell align">
+          {{ session.location }}
+        </div>
+        <div class="table-cell align">
+          {{ session.date }}
+        </div>
+        <div class="table-cell align">
+          {{ session.hour }}
+        </div>
+        <div class="table-cell align">
+          {{ session.name }}
+        </div>
+        <div class="table-cell align">
+          {{ session.numberPhoto }}
         </div>
       </div>
     </div>
   </div>
 
+<<<<<<< Updated upstream
+=======
+  <!-- <ol>
+    <li v-for="list in sessions">
+      {{ list.location + list.date + list.hour + list.name + list.numberPhoto }}
+    </li>
+  </ol> -->
+  </div>
+
+>>>>>>> Stashed changes
   <hr>
   <h2 class="title"> Exercice 4</h2>
 
@@ -261,7 +181,7 @@
     var app1 = new Vue({
       el: "#app-1",
       data: {
-        lists: [{
+        sessions: [{
             location: "Paris",
             date: "21/05/2018",
             hour: "14h",
@@ -282,7 +202,6 @@
             name: "Robin",
             numberPhoto: 15
           }
-
         ]
       }
     })
