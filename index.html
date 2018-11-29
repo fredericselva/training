@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Titre de la page</title>
   <link rel="stylesheet" href="css/raw.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <style>
     @import url("css/Roboto.css");
 
@@ -15,7 +16,6 @@
 
     body {
       font-family: Roboto;
-      height: 2000px;
       padding-top: var(--nav-height);
       background: #d9d9d9;
     }
@@ -31,9 +31,10 @@
     }
 
     .pad {
-      padding: 10px;
+      padding: 20px;
     }
-    .pad:hover{
+
+    .pad:hover {
       border: 2px solid red;
       transition: all 0.2s ease-in;
     }
@@ -43,56 +44,56 @@
       background: white;
     }
 
-    .bloc, .bloc2 {
-      border: 1px solid darkgray;
-      width: 250px;
-      height: 50px;
+    .title {
+      padding-bottom: 20px;
     }
 
-    .bloc2 {
-      border: 1px solid darkgray;
-      margin: 20px;
+    .align {
+      text-align: center;
     }
-    .btn{
-      width: 150px;
-      margin: 10px 0px 10px 0px;
-    }
-    .retract .nav {
-      background: pink;
-      overflow: hidden;
-    }
-    .ex3 { padding-bottom: 20px; }
-    .align { text-align: center; }
-    .table-cell, .borderbox {
+
+    .table-cell,
+    .borderbox {
       flex: 1 0;
       padding: 8px 12px;
     }
+
     .borderbox {
       border: 1px solid black;
     }
+
     .table-row:nth-child(1) {
       border-top: 1px solid black;
     }
+
     .table-row {
       border-bottom: 1px solid black;
     }
+
     .table-cell:nth-child(1) {
       border-left: 1px solid black;
     }
+
     .table-cell {
       border-right: 1px solid black;
     }
 
-    .table { padding: 0px 30px 30px 30px; }
-   .table-row:hover{
-     background: red;
-     transition: all .1s ease-in;
+    .table {
+      padding: 0px 30px 30px 30px;
     }
-   .textsize {
-     font-size: 20px;
-   }
-   .paragraphe{ font-style: italic; }
 
+    .table-row:hover {
+      background: red;
+      transition: all .1s ease-in;
+    }
+
+    .textsize {
+      font-size: 20px;
+    }
+
+    .paragraphe {
+      font-style: italic;
+    }
   </style>
 </head>
 
@@ -106,35 +107,10 @@
   </div>
 
   <div>
-    <h1>Training</h1>
-    <h2>sous-titre</h2>
+    <h1 class="rows center">Training</h1>
   </div>
 
-  <div class="container">
-    <div>
-      <h3>entrainement aujourd'hui</h3>
-    </div>
-    <button class="btn" type="button" onclick="document.body.classList.toggle('retract')">Clic</button>
-    <div class="rows between">
-      <div class="bloc">
-        Vestibulum id ligula porta felis euismod semper.
-      </div>
-      <div class="bloc">
-        Vestibulum id ligula porta felis euismod semper.
-      </div>
-    </div>
-    <div class="rows center">
-      <div class="bloc2">estibulum id ligula porta felis euismod semper</div>
-      <div class="bloc2">estibulum id ligula porta felis euismod semper</div>
-      <div class="bloc2">estibulum id ligula porta felis euismod semper</div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div> entrainement aujourd'hui</div>
-  </div>
-
-  <h2 class="ex3"> Exercice 3</h2>
+  <h2 class="title">HTML/CSS</h2>
 
   <div class="table">
     <div class="row table-row">
@@ -240,30 +216,45 @@
       </div>
     </div>
   </div>
-
-  <hr>
-  <h2 class="ex3"> Exercice 4</h2>
-
-  <div class="container">
-<<<<<<< HEAD
-    <div class="flex-container2">
-      <div class="rows">
-        <div class="borderbox">
-          <h4 class="textsize">Java</h4>
-          <p class="paragraphe">Java est une technique informatique développée initialement par Sun Microsystems puis rachetée par Oracle. Défini à l'origine comme un langage de programmation, Java a évolué pour devenir un ensemble cohérent
-            d'éléments
-            techniques et non techniques</p>
+  <h2 class="title">Vue.js</h2>
+  <div id="app-1">
+    <div class="table">
+      <div class="row table-row" v-for="list in lists">
+        <div class="table-cell align">
+          {{ list.location }}
         </div>
-        <div class="borderbox">
-          <h4 class="textsize">Python</h4>
-          <p class="paragraphe">Python est un langage de programmation objet interprété, multi-paradigme et multiplateformes. Il favorise la programmation impérative structurée, fonctionnelle et orientée objet.</p>
+        <div class="table-cell align">
+          {{ list.date }}
+        </div>
+        <div class="table-cell align">
+          {{ list.hour }}
+        </div>
+        <div class="table-cell align">
+          {{ list.name }}
+        </div>
+        <div class="table-cell align">
+          {{ list.numberPhoto }}
         </div>
       </div>
-=======
+    </div>
+  </div>
+
+  <!-- <ol>
+    <li v-for="list in lists">
+      {{ list.location + list.date + list.hour + list.name + list.numberPhoto }}
+    </li>
+  </ol> -->
+  </div>
+
+  <hr>
+  <h2 class="title"> Exercice 4</h2>
+
+  <div class="container">
     <div class="rows">
       <div class="borderbox">
         <h3>Java</h3>
-        <div class="paragraphe">Java est une technique informatique développée initialement par Sun Microsystems puis rachetée par Oracle. Défini à l'origine comme un langage de programmation, Java a évolué pour devenir un ensemble cohérent d'éléments
+        <div class="paragraphe">Java est une technique informatique développée initialement par Sun Microsystems puis rachetée par Oracle. Défini à l'origine comme un langage de programmation, Java a évolué pour devenir un ensemble cohérent
+          d'éléments
           techniques et non techniques</div>
       </div>
       <div class="borderbox">
@@ -271,9 +262,38 @@
         <div class="paragraphe">Python est un langage de programmation objet interprété, multi-paradigme et multiplateformes. Il favorise la programmation impérative structurée, fonctionnelle et orientée objet.</div>
       </div>
     </div>
->>>>>>> 12ed0419524dd2e596097be1b09780b39ebd070b
-    </div>
   </div>
+
+  <script>
+    var app1 = new Vue({
+      el: "#app-1",
+      data: {
+        lists: [{
+            location: "Paris",
+            date: "21/05/2018",
+            hour: "14h",
+            name: "Alan",
+            numberPhoto: 30
+          },
+          {
+            location: "Marseille",
+            date: "11/12/2018",
+            hour: "9h",
+            name: "Alex",
+            numberPhoto: 20
+          },
+          {
+            location: "Lyon",
+            date: "12/12/2018",
+            hour: "15h",
+            name: "Robin",
+            numberPhoto: 15
+          }
+
+        ]
+      }
+    })
+  </script>
 
 </body>
 
