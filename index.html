@@ -7,6 +7,7 @@
   <title>Titre de la page</title>
   <link rel="stylesheet" href="css/raw.css">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
   <style>
     @import url("css/Roboto.css");
 
@@ -148,19 +149,8 @@
       </div>
     </div>
   </div>
-
-<<<<<<< Updated upstream
-=======
-  <!-- <ol>
-    <li v-for="list in sessions">
-      {{ list.location + list.date + list.hour + list.name + list.numberPhoto }}
-    </li>
-  </ol> -->
-  </div>
-
->>>>>>> Stashed changes
   <hr>
-  <h2 class="title"> Exercice 4</h2>
+  <h2 class="title">Exercice 4</h2>
 
   <div class="container">
     <div class="rows">
@@ -181,31 +171,18 @@
     var app1 = new Vue({
       el: "#app-1",
       data: {
-        sessions: [{
-            location: "Paris",
-            date: "21/05/2018",
-            hour: "14h",
-            name: "Alan",
-            numberPhoto: 30
-          },
-          {
-            location: "Marseille",
-            date: "11/12/2018",
-            hour: "9h",
-            name: "Alex",
-            numberPhoto: 20
-          },
-          {
-            location: "Lyon",
-            date: "12/12/2018",
-            hour: "15h",
-            name: "Robin",
-            numberPhoto: 15
-          }
-        ]
+        sessions: []
+      },
+      methods: {
+        mounted: function() {
+          axios.get('json/sessions.json').then(res => {
+            this.sessions = res.data
+          })
+        }
       }
-    })
+    });
   </script>
 
 </body>
+
 </html>
